@@ -32,6 +32,10 @@ body{
     text-align: center;
 }
 
+select{
+    text-align-last:center;
+}
+
 #dia{
     margin: 0 0 0 auto;
 }
