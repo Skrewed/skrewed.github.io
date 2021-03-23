@@ -1,6 +1,8 @@
 body{
     background-image: url("images\\bg-256.png");
     background-repeat: repeat;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
 }
 
 #box{
