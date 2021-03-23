@@ -1,0 +1,79 @@
+body{
+    background-image: url("images\\bg-256.png");
+    background-repeat: repeat;
+}
+
+#box{
+    border-radius: 6px;
+    padding: 10px 0 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(14, 52, 122);
+    width: 80%;
+    margin: 30px auto 10px auto;
+    text-align: center;
+}
+
+#dia, #mes, #ano {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: rgb(199, 217, 226);
+    padding: 10px 0 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    opacity: 90%;
+    width: 20%;
+    text-align: center;
+}
+
+#dia{
+    margin: 0 0 0 auto;
+}
+
+#mes{
+    margin: 0 5px 0 5px;
+}
+
+#ano{
+    margin: 0 auto 0 0;
+}
+
+#centerInputs{
+    margin: auto;
+    text-align: center;
+}
+
+#calcular{
+    border-radius: 100%;
+    border-width: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight:500;
+    color: white;
+    background-color: rgb(14, 52, 122);
+    width: 130px;
+    height: 130px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+#igResultado, #dppResultado {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: rgb(199, 217, 226);
+    padding: 10px 0 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: rgb(14, 52, 122);
+    font-weight: bold;
+    background-color: white;
+    opacity: 90%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}

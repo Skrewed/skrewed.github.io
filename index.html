@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade Gestacional e Data Provável do Parto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+</head>
+<body>
+    
+    <div id='box'>
+        Data da Última Menstruação (<strong>DUM</strong>)
+    </div>
+    
+    <div id='centerInputs'>
+    <input type="number" placeholder="Dia" id="dia">
+    <input type="number" placeholder="Mês" id="mes">
+    <input type="number" placeholder="Ano" id="ano">
+    </div>
+    
+    <div id='centerInputs'><input type="button" value="CALCULAR" id='calcular' onclick="calcular()"></div>
+
+    <div id='box'>
+        Idade Gestacional (<strong>IG</strong>)
+    </div>
+
+    <div id="igResultado"> </div>
+
+    <div id='box'>
+        Data Provável do Parto (<strong>DPP</strong>)
+    </div>
+
+    <div id="dppResultado"> </div>
+    
+    <script type='text/javascript' language='javascript' src="script.js"></script>
+</body>
+</html>
