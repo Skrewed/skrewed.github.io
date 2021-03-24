@@ -1,13 +1,16 @@
 var dia, mes, ano, anoSelect, mesSelect, diaSelect, msgDias, dumSemanas, dumTotalDias, dumDias, dumString, dumDate, dumTempo, dataAtual, diaAtual, mesAtual, anoAtual, anoBi, diaProv, mesProv, anoProv
 
+//Salva em variáveis data atual.
+dataAtual = new Date()
+anoAtual = dataAtual.getFullYear() //2021
+diaAtual = dataAtual.getDate() //23
+mesAtual = dataAtual.getMonth() + 1 //index de 0 (jan) a 11 (dez), por isso o + 1
+
+window.document.getElementById('1stAno').innerText = `${anoAtual - 1}`
+window.document.getElementById('2ndAno').innerText = `${anoAtual}`
+
 function calcular() {
 
-    //Salva em variáveis data atual.
-    dataAtual = new Date()
-    anoAtual = dataAtual.getFullYear() //2021
-    diaAtual = dataAtual.getDate() //23
-    mesAtual = dataAtual.getMonth() + 1 //index de 0 (jan) a 11 (dez), por isso o + 1
-    
     diaSelect = document.getElementById('dia')
     //pega o value da option selecionada, converte para Number e armazena na respectiva variável
     dia = Number(diaSelect.options[diaSelect.selectedIndex].value) //document.getElementById('ID').options[selectedIndex].value
