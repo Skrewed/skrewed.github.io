@@ -20,17 +20,21 @@ function calcular() {
 
     anoSelect = document.getElementById('ano')
     ano = Number(anoSelect.options[anoSelect.selectedIndex].value) //document.getElementById('ID').options[selectedIndex].value
-    
+
+    //new Date pega data em inglês, então o mês precisou vir primeiro
+    dumString = `"${mes.toString().padStart(2, "0")}/${dia.toString().padStart(2, "0")}/${ano}"`
+    dumDate = new Date(dumString)
+
     if (dia == 0) { //verifica se a pessoa selecionou um dia.
         alert ("Selecione um dia entre 1 e 31.")
     } else if (mes == 0) { //verifica se a pessoa selecionou um mês.
         alert ("Selecione um mês entre Janeiro e Dezembro.")
     } else if (ano == 0) { //verifica se a pessoa selecionou um ano.
-            alert (`Selecione um ano entre ${anoAtual - 1} e ${anoAtual}.`)
+        alert (`Selecione um ano entre ${anoAtual - 1} e ${anoAtual}.`)
+    } else if (dumDate.getTime() > dataAtual.getTime()){
+        alert ("Selecione uma data anterior a data atual.")
     } else { //Deixa o programa continuar execução.
-        //new Date pega data em inglês, então o mês precisou vir primeiro
-        dumString = `"${mes.toString().padStart(2, "0")}/${dia.toString().padStart(2, "0")}/${ano}"`
-        dumDate = new Date(dumString)
+        
         //Verifica se ano atual é bissexto, e sendo, anoBi recebe 1
         if (((anoAtual % 4 == 0) && (anoAtual % 100 != 0)) || (anoAtual % 400 == 0)){
             anoBi = 1
