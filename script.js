@@ -57,10 +57,12 @@ function calcular() {
         //resto da divisão arredondado para 1 casa decimal
         dumDias = (dumTotalDias % 7).toFixed(0)
         //Se o resto da divisão do total de dias por 7 for maior que 0, então será x Semana e x dias; do contrário, não precisa mostrar dias.
-        if (dumDias > 0) {
-            msgDias = ` e ${dumDias} dias.`
+        if (dumDias > 1) {
+            msgDias = ` e ${dumDias} dias`
+        } else if (dumDias == 1) {
+            msgDias = ` e ${dumDias} dia`
         } else {
-            msgDias = '.'
+            msgDias = ''
         }
             //Se a DUM for em janeiro, fevereiro ou março, é somado 7 ao dia; e 9 ao mês e o ano deve ser mantido.
             if (mes == 1 || mes == 2 || mes == 3){
@@ -111,7 +113,15 @@ function calcular() {
                     mesProv = mesProv + 1
                 }
             }
-            window.document.getElementById('igResultado').innerHTML = `${dumSemanas} semanas${msgDias}`
+            if (dumSemanas == 0 && dumDias == 1){
+                window.document.getElementById('igResultado').innerHTML = `${dumDias} dia`
+            } else if (dumSemanas == 0 && dumDias > 1){
+                window.document.getElementById('igResultado').innerHTML = `${dumDias} dias`
+            } else if (dumSemanas == 1) {
+                window.document.getElementById('igResultado').innerHTML = `${dumSemanas} semana${msgDias}`
+            } else {
+                window.document.getElementById('igResultado').innerHTML = `${dumSemanas} semanas${msgDias}`
+            }
             window.document.getElementById('dppResultado').innerHTML = `${diaProv.toString().padStart(2,"0")}/${mesProv.toString().padStart(2,"0")}/${anoProv}`
     }
 }
