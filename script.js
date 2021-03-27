@@ -3,7 +3,7 @@ var dia, mes, ano, anoSelect, mesSelect, diaSelect, msgDias, dumSemanas, dumTota
 //Salva em variáveis data atual.
 dataAtual = new Date()
 anoAtual = dataAtual.getFullYear() //2021
-diaAtual = dataAtual.getDate() //23
+diaAtual = dataAtual.getDate() //27
 mesAtual = dataAtual.getMonth() + 1 //index de 0 (jan) a 11 (dez), por isso o + 1
 
 window.document.getElementById('1stAno').innerText = `${anoAtual - 1}`
@@ -31,7 +31,7 @@ function calcular() {
         alert ("Selecione um mês entre Janeiro e Dezembro.")
     } else if (ano == 0) { //verifica se a pessoa selecionou um ano.
         alert (`Selecione um ano entre ${anoAtual - 1} e ${anoAtual}.`)
-    } else if (dumDate.getTime() > dataAtual.getTime()){
+    } else if ( dumDate.getTime() > dataAtual.getTime() || (diaAtual == dia && mesAtual == mes && anoAtual == ano)){
         alert ("Selecione uma data anterior a data atual.")
     } else { //Deixa o programa continuar execução.
         
@@ -125,3 +125,5 @@ function calcular() {
             window.document.getElementById('dppResultado').innerHTML = `${diaProv.toString().padStart(2,"0")}/${mesProv.toString().padStart(2,"0")}/${anoProv}`
     }
 }
+
+//Créditos: André Andrade. Instagram: @andr.enf
